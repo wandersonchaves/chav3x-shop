@@ -1,13 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  images: {
-    remotePatterns: [
-      {
-        hostname: 'files.stripe.com'
-      }
-    ]
-  }
-};
+  swcMinify: true,
 
-export default nextConfig;
+  images: {
+    domains: ['files.stripe.com'],
+  },
+
+  experimental: {
+    newNextLinkBehavior: true,
+    images: {
+      allowFutureImage: true,
+    },
+  },
+}
+
+export default nextConfig

@@ -1,12 +1,15 @@
-import { Head, Html, Main, NextScript } from "next/document";
+import {Head, Html, Main, NextScript} from 'next/document'
 
-import { getCssText } from "@/styles";
+import {getCssText} from '../styles'
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html>
       <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+        />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
@@ -19,7 +22,7 @@ export default function Document() {
 
         <style
           id="stitches"
-          dangerouslySetInnerHTML={{ __html: getCssText() }}
+          dangerouslySetInnerHTML={{__html: getCssText()}}
         />
       </Head>
       <body>
@@ -27,5 +30,5 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
-  );
+  )
 }
