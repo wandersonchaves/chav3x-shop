@@ -11,10 +11,10 @@ function App({Component, pageProps}: AppProps) {
   return (
     <Container>
       <Header>
-        <Image
+        {/* <Image
           src={logoImg}
           alt=""
-        />
+        /> */}
       </Header>
 
       <Component {...pageProps} />
